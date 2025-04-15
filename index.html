@@ -49,17 +49,38 @@
 
 <section class="section section--intro" id="intro">
     <div class="section__inner">
-        <div class="block">
-            <a class="pre" href="#intro"><span>#1</span>Intro</a>
-            <h1>Aayush Shah is a<br>
-                Full-Stack Developer | AI & FinTech<br>
-                Enthusiast | Researcher based in<br>
-                Mumbai.</h1>
-            <p class="lead">
-                He is a passionate Full-Stack Developer with a strong foundation in React, Supabase, Node.js, and Rust, driven by my interest in high-performance computing, AI, and FinTech solutions. Currently studing MBA + BTech a dual degree course at NMIMS, find further details on <a href="https://www.linkedin.com/in/aayush-shah-32baa424a/" class="link" target="_blank">Linkedin</a>.
-            </p>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <a class="pre" href="#intro"><span>#1</span>Intro</a>
+                <h1>Aayush Shah is a<br>
+                    Full-Stack Developer | AI & FinTech<br>
+                    Enthusiast | Researcher based in<br>
+                    Mumbai.</h1>
+                <p class="lead">
+                    He is a passionate Full-Stack Developer with a strong foundation in React, Supabase, Node.js, and Rust, driven by my interest in high-performance computing, AI, and FinTech solutions. Currently studing MBA + BTech a dual degree course at NMIMS, find further details on <a href="https://www.linkedin.com/in/aayush-shah-32baa424a/" class="link" target="_blank">Linkedin</a>.
+                </p>
+            </div>
+            
+            <!-- Image Carousel for Intro Section -->
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <!-- <button class="carousel-btn prev-btn"><span>&#10094;</span></button> -->
+                    <div class="carousel">
+                        <div class="carousel-slide active" data-slide="intro-1">
+                            <img src="./assets/intro-sample1.jpeg" alt="Profile photo">
+                        </div>
+                        <!-- <div class="carousel-slide" data-slide="intro-2">
+                            <img src="./assets/intro-sample2.jpg" alt="Sample Image 2">
+                        </div>
+                        <div class="carousel-slide" data-slide="intro-3">
+                            <img src="./assets/intro-sample3.jpg" alt="Sample Image 3">
+                        </div> -->
+                    </div>
+                    <!-- <button class="carousel-btn next-btn"><span>&#10095;</span></button> -->
+                </div>
+                <!-- <div class="carousel-dots" id="intro-dots"></div> -->
+            </div>
         </div>
-        
     </div>
 </section>
 
@@ -84,27 +105,49 @@
     </svg>
 
     <div class="section__inner">
-        <div class="block">
-            <a class="pre" href="#projects"><span>#3</span>Projects</a>
-            <h2>Aayush's Projects</h2>
-            <p class="lead">Research & Development:</p>
-            <ul class="project-list">
-                <li>
-                    High Performance File Search with Rust: Parallelized Indexing for Enhanced Computational Efficiency
-                    <p>Accepted paper at IEEE Explore</p>
-                    <a href="https://github.com/PrabirKalwani/High_Performance_File_Searching_with_Rust.git" target="_blank" class="visit-btn">Visit Project</a>
-                </li>
-                <li>
-                    Finease Financial Management Tool
-                    <p>1st place in Hackathon - A platform that helps newcomers learn, grow, and manage their money with confidence</p>
-                    <a href="https://github.com/PrabirKalwani/Finease_Financial_Mangement_Tool.git" target="_blank" class="visit-btn">Visit Project</a>
-                </li>
-                <li>
-                    Apollo Voice Assistant app
-                    <p>A voice based assistant application on flutter with a python backend using RESTful API's</p>
-                    <a href="https://github.com/PrabirKalwani/Apollo-Voice-Assistant.git" target="_blank" class="visit-btn">Visit Project</a>
-                </li>
-            </ul>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <a class="pre" href="#projects"><span>#3</span>Projects</a>
+                <h2>Aayush's Projects</h2>
+                <p class="lead">Research & Development:</p>
+                <ul class="project-list">
+                    <li>
+                        High Performance File Search with Rust: Parallelized Indexing for Enhanced Computational Efficiency
+                        <p>Accepted paper at IEEE Explore</p>
+                        <a href="https://github.com/PrabirKalwani/High_Performance_File_Searching_with_Rust.git" target="_blank" class="visit-btn">Visit Project</a>
+                    </li>
+                    <li>
+                        Finease Financial Management Tool
+                        <p>1st place in Hackathon - A platform that helps newcomers learn, grow, and manage their money with confidence</p>
+                        <a href="https://github.com/PrabirKalwani/Finease_Financial_Mangement_Tool.git" target="_blank" class="visit-btn">Visit Project</a>
+                    </li>
+                    <li>
+                        Apollo Voice Assistant app
+                        <p>A voice based assistant application on flutter with a python backend using RESTful API's</p>
+                        <a href="https://github.com/PrabirKalwani/Apollo-Voice-Assistant.git" target="_blank" class="visit-btn">Visit Project</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Image Carousel for Projects Section -->
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <button class="carousel-btn prev-btn"><span>&#10094;</span></button>
+                    <div class="carousel">
+                        <div class="carousel-slide active" data-slide="projects-1">
+                            <img src="./assets/projects-sample1.jpg" alt="Project Sample 1">
+                        </div>
+                        <div class="carousel-slide" data-slide="projects-2">
+                            <img src="./assets/projects-sample2.png" alt="Project Sample 2">
+                        </div>
+                        <div class="carousel-slide" data-slide="projects-3">
+                            <img src="./assets/projects-sample3.jpg" alt="Project Sample 3">
+                        </div>
+                    </div>
+                    <button class="carousel-btn next-btn"><span>&#10095;</span></button>
+                </div>
+                <div class="carousel-dots" id="projects-dots"></div>
+            </div>
         </div>
     </div>
 </section>
@@ -115,37 +158,65 @@
     </svg>
 
     <div class="section__inner">
-        <div class="block">
-            <a class="pre" href="#portfolio"><span>#4</span>Portfolio</a>
-            <h2>Net Compute - A Distributed Computing Framework</h2>
-            <p class="lead">NetCompute aims to create a distributed computing framework that utilizes unused computational resources in a network of computers. This system will dynamically assign tasks to connected nodes, pooling their collective computational power to execute resource-intensive workloads with 100% more efficiency.</p>
-            <a href="https://github.com/aayushshah1/NetCompute.git" target="_blank" class="visit-btn">Visit Project</a>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <a class="pre" href="#portfolio"><span>#4</span>Portfolio</a>
+                <h2>Net Compute - A Distributed Computing Framework</h2>
+                <p class="lead">NetCompute aims to create a distributed computing framework that utilizes unused computational resources in a network of computers. This system will dynamically assign tasks to connected nodes, pooling their collective computational power to execute resource-intensive workloads with 100% more efficiency.</p>
+                <a href="https://github.com/aayushshah1/NetCompute.git" target="_blank" class="visit-btn">Visit Project</a>
+            </div>
+            
+            <!-- Image Carousel for Portfolio Item 1 -->
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <button class="carousel-btn prev-btn"><span>&#10094;</span></button>
+                    <div class="carousel">
+                        <div class="carousel-slide active" data-slide="portfolio1-1">
+                            <img src="./assets/portfolio1-sample1.jpg" alt="Portfolio 1 Sample 1">
+                        </div>
+                        <div class="carousel-slide" data-slide="portfolio1-2">
+                            <img src="./assets/portfolio1-sample2.jpg" alt="Portfolio 1 Sample 2">
+                        </div>
+                        <div class="carousel-slide" data-slide="portfolio1-3">
+                            <img src="./assets/portfolio1-sample3.jpg" alt="Portfolio 1 Sample 3">
+                        </div>
+                    </div>
+                    <button class="carousel-btn next-btn"><span>&#10095;</span></button>
+                </div>
+                <div class="carousel-dots" id="portfolio1-dots"></div>
+            </div>
         </div>
     </div>
 </section>
 
-
-<!-- <section class="section section--portfolio1" id="portfolio">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
-    </svg>
-
-    <div class="section__inner">
-        <div class="block">
-            <a class="pre" href="#portfolio"><span>#4</span>Portfolio</a>
-            <h2>Portfolio Item #1</h2>
-            <p class="lead">Here are some of his clients, he has had the pleasure working with.</p>
-        </div>
-    </div>
-</section> -->
-
-
 <section class="section section--portfolio" id="portfolio2">
     <div class="section__inner">
-        <div class="block">
-            <h2>DeepFake Detection using Feature Stacking and Meta-Learning</h2>
-            <p>DeepFake detection framework leveraging RetinaFace for precise face localization, followed by deep feature stacking using Xception and EfficientNet-B7 and using ensemble meta learning approach for 97.1% accuracy.</p>
-            <a href="https://github.com/aayushshah1/DeepfakeDetector.git" target="_blank" class="visit-btn">Visit Project</a>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>DeepFake Detection using Feature Stacking and Meta-Learning</h2>
+                <p>DeepFake detection framework leveraging RetinaFace for precise face localization, followed by deep feature stacking using Xception and EfficientNet-B7 and using ensemble meta learning approach for 97.1% accuracy.</p>
+                <a href="https://github.com/aayushshah1/DeepfakeDetector.git" target="_blank" class="visit-btn">Visit Project</a>
+            </div>
+            
+            <!-- Image Carousel for Portfolio Item 2 -->
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <button class="carousel-btn prev-btn"><span>&#10094;</span></button>
+                    <div class="carousel">
+                        <div class="carousel-slide active" data-slide="portfolio2-1">
+                            <img src="./assets/portfolio2-sample1.jpg" alt="Portfolio 2 Sample 1">
+                        </div>
+                        <div class="carousel-slide" data-slide="portfolio2-2">
+                            <img src="./assets/portfolio2-sample2.jpg" alt="Portfolio 2 Sample 2">
+                        </div>
+                        <div class="carousel-slide" data-slide="portfolio2-3">
+                            <img src="./assets/portfolio2-sample3.jpg" alt="Portfolio 2 Sample 3">
+                        </div>
+                    </div>
+                    <button class="carousel-btn next-btn"><span>&#10095;</span></button>
+                </div>
+                <div class="carousel-dots" id="portfolio2-dots"></div>
+            </div>
         </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none" class="bottom">

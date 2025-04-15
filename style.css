@@ -259,7 +259,7 @@ a {
   min-height: 60vh;
   width: 100%;
   align-content: center;
-  padding: 20vh 50px 20vh 75px;
+  padding: 15vh 50px 15vh 75px;
 }
 .section svg {
   position: absolute;
@@ -276,7 +276,7 @@ a {
 }
 .section .section__inner {
   height: 100%;
-  max-width: 800px;
+  max-width: 1350px; /* Increased from 800px to accommodate side-by-side layout */
   margin: auto auto auto 0;
 }
 .section.section--hello {
@@ -508,5 +508,233 @@ p a:hover {
   font-size: inherit;
   color: #343436;
   opacity: 0.7;
+}
+
+/* Image Carousel Styles */
+.carousel-container {
+  position: relative;
+  width: auto; /* Changed from 100% to auto for dynamic width */
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 0;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  position: relative;
+  display: none;
+  height: auto;
+  transition: transform 0.6s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: auto; /* Changed from 100% to auto for dynamic sizing */
+  height: auto;
+  max-height: 55vh;
+  max-width: 100%; /* Added max-width to prevent overflow */
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  border-radius: 12px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn span {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 0;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* Increased margin for better spacing */
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: #fff;
+}
+
+/* Section specific carousel modifications */
+.section--intro .carousel-container {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section--intro .dot {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.section--intro .dot.active {
+  background: #333;
+}
+
+.section--clients .carousel-container {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Make carousel responsive */
+@media (max-width: 768px) {
+  .carousel-container {
+    margin: 1.5rem 0;
+  }
+  
+  .carousel-slide img {
+    max-height: 50vh; /* Adjusted for mobile */
+  }
+  
+  .carousel-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide img {
+    max-height: 40vh; /* Further adjusted for smaller screens */
+  }
+}
+
+/* Content wrapper for side-by-side layout */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* Changed from wrap to nowrap for better side by side */
+  align-items: center; /* Changed back to center for better vertical alignment with varying image heights */
+  justify-content: space-between;
+  gap: 3rem; /* Increased gap for better spacing */
+  width: 100%;
+  padding: 0; /* Remove any padding that might be causing issues */
+}
+
+.text-content {
+  flex: 0 1 50%; /* Equal to carousel wrapper */
+  min-width: 280px;
+  max-width: 50%; /* Added max-width to prevent text from expanding too much */
+  padding-right: 0; /* Removed padding-right */
+}
+
+.carousel-wrapper {
+  flex: 0 1 auto; /* Changed from fixed percentage to auto for dynamic sizing */
+  min-width: 280px;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0; /* Remove any padding */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) { /* Changed breakpoint from 992px to 1100px */
+  .content-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .text-content, .carousel-wrapper {
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .carousel-container {
+    max-width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Maintain existing carousel styles for buttons, dots, etc. */
+
+/* Section specific content modifications */
+.section--intro .content-wrapper {
+  gap: 3rem;
+}
+
+.section--intro .carousel-container {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section--clients .content-wrapper {
+  gap: 2rem;
+}
+
+.section--clients .carousel-container {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjust section padding for better layout with side-by-side content */
+@media (max-width: 768px) {
+  .section {
+    padding: 10vh 30px 10vh 75px;
+  }
+  
+  .carousel-container {
+    aspect-ratio: 4 / 3; /* More squared images on mobile */
+  }
+  
+  .carousel-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 8vh 20px 8vh 60px;
+  }
 }
 
