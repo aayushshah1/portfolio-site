@@ -173,6 +173,34 @@ a {
   color: rgba(0, 0, 0, 0.8);
 }
 
+/* Back to Top button styles */
+.back-to-top {
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the left */
+  z-index: 999; /* Ensure it stays on top */
+  display: none; /* Hidden by default */
+  background-color: #f0f0f0; /* Pastel background color */
+  color: #555; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Circular shape */
+  width: 50px; /* Increased width of the button */
+  height: 50px; /* Increased height of the button */
+  text-align: center; /* Center the text */
+  line-height: 50px; /* Vertically center the text */
+  font-size: 24px; /* Increased font size */
+  cursor: pointer; /* Change cursor on hover */
+  opacity: 0.7; /* Transparency */
+  transition: background-color 0.3s, opacity 0.3s; /* Smooth transition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.back-to-top:hover {
+  background-color: #e0e0e0; /* Darker pastel color on hover */
+  opacity: 1; /* Solid on hover */
+}
+
+
 /**
  * The first navigation
  */
@@ -301,6 +329,71 @@ a {
   fill: white;
 }
 
+/* Project List Styling */
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-list li {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.project-list li:last-child {
+  border-bottom: none;
+}
+
+.project-list li p {
+  margin: 0.5rem 0;
+  opacity: 0.7;
+  font-size: 0.7rem;
+}
+
+/* Visit button styling */
+.visit-btn {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-family: "nimbus-sans", sans-serif;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.section--portfolio1 .visit-btn,
+.section--portfolio .visit-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.visit-btn:hover {
+  background-color: white;
+  color: #343436;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional responsive adjustments for project display */
+@media (max-width: 30rem) {
+  .project-list li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .visit-btn {
+    display: block;
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+}
+
 /**
  * Typo
  */
@@ -416,3 +509,4 @@ p a:hover {
   color: #343436;
   opacity: 0.7;
 }
+
